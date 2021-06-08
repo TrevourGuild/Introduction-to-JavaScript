@@ -18,6 +18,15 @@ Do the following:
    HINT: no function required
 */
 
+let votingAge = 18;
+
+if(votingAge >=18){
+  console.log(true);
+}
+else{
+  console.log(false);
+}
+
 
 
 /*
@@ -31,6 +40,12 @@ Do the following:
    HINT: no function required
 */
 
+let num1 = 7; 
+let num2 = 5;
+
+num1 = num2;
+
+console.log(num1);
 
 
 
@@ -46,6 +61,10 @@ Do the following:
    HINT: look up the Number method
 */
 
+let strType = "1999";
+strType = 1999;
+
+console.log(strType);
 
 
 
@@ -58,9 +77,13 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(x, y){
+    return x * y; 
   }
+
+  console.log("multiply ->", multiply(7,9));
+
+
 
 
 
@@ -74,9 +97,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age * 7;
 }
+
+console.log("Age in Dog Years ->", dogYears(7));
 
 
 
@@ -134,7 +159,7 @@ function hungryDog(weight, age){
     }
   }
 
-  console.log('task 3', hugryDog(15,1));
+  console.log('task 3', hungryDog(15,1));
 
 
 
@@ -159,9 +184,41 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+let randomInt = Math.floor(Math.random());
+
 function game(user, computer){
-    /*add your code here*/
+  if (user === 'rock' && computer ==="scissors"){
+    return 'you win!';
+  }
+  else if (user === 'rock' && computer ==="paper"){
+    return 'you lose!';
+  }
+  else if (user === 'rock' && computer ==="rock"){
+    return "it's a tie";
+  }
+  else if (user === 'scissors' && computer ==="rock"){
+    return 'you lose!';
+  }
+  else if (user === 'scissors' && computer ==="paper"){
+    return 'you win!';
+  }
+  else if (user === 'scissors' && computer ==="scissors"){
+    return "it's a tie";
+  }
+  else if (user === 'paper' && computer ==="scissors"){
+    return 'you lose!';
+  }
+  else if (user === 'paper' && computer ==="rock"){
+    return 'you win!';
+  }
+  else if (user === 'paper' && computer ==="paper"){
+    return "it's a tie";
+  }
 }
+game();
+console.log("rock paper scissors");
+
+
   
   
 
@@ -176,9 +233,13 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(kilometers){
+
+    return kilometers * 0.621371;
+
   }
+
+  miles(0.1);
 
 
 
@@ -190,9 +251,11 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm / 30.48;
   }
+
+  feet(160);
  
 
 
@@ -206,9 +269,13 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+function annoyingSong(counter){
+  var newcount = 4;
+    for(count; count >=1; count = count - 1){
+    return counter + ' bottles of soda on the wall,'+ counter + ' bottles of soda, take one down pass it around ' + newcount + ' bottles of soda on the wall'
+    }
+  }    
+  annoyingSong(5);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -225,10 +292,28 @@ Using the grade function below do the following:
    60-69 should return 'you got a D'
    below should return 'you got an F'
 */
-  
-function grade(/*Your Code here */){
-  /*Your Code here */
-  }
+
+function grade(gradeData){
+  if(points >= 90) {
+    alert("Your letter grade is an A!");
+    }
+    if(points<=89&&points>=80) {
+    alert("Your letter grade is a B !");
+    }
+    if(points<=79&&points>=70) {
+    alert("Your letter grade is a C !");
+    }
+    if(points<=69&&points>=60) {
+    alert("Your letter grade is a D !");
+    }
+    if(points<60) {
+    alert("Your letter grade is an F !");
+    }
+}
+
+grade();
+
+
   
   
 
